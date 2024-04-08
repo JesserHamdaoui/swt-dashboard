@@ -1,0 +1,24 @@
+.logo img {
+  height: 52px;
+  margin-right: 6px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 26px;
+  color: var(--primary);
+}
+
+.logo {
+  line-height: 1;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 280px;
+  }
+}
+
+.bi.bi-list {
+  cursor: pointer;
+}
