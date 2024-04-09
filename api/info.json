@@ -1,0 +1,110 @@
+{
+  "cards": [
+    {
+      "_id": 1,
+      "name": "Total Power Generated",
+      "icon": "bi bi-lightning-charge",
+      "amount": 3450,
+      "percentage": 0.85,
+      "active": true
+    },
+    {
+      "_id": 2,
+      "name": "Average Wind Speed",
+      "icon": "bi bi-wind",
+      "amount": 18,
+      "percentage": 0.72,
+      "active": true
+    },
+    {
+      "_id": 3,
+      "name": "Maintenance Alerts",
+      "icon": "bi bi-tools",
+      "amount": 5,
+      "percentage": -0.15,
+      "active": true
+    },
+    {
+      "_id": 4,
+      "name": "Energy Consumption",
+      "icon": "bi bi-lightbulb",
+      "amount": 2200,
+      "percentage": 0.6,
+      "active": true
+    }
+  ],
+  "recentActivities": [
+    {
+      "_id": "WT001",
+      "date": "2024-04-09",
+      "time": "08:30:00",
+      "value": "30°",
+      "action": "Turn"
+    },
+    {
+      "_id": "WT002",
+      "date": "2024-04-09",
+      "time": "09:15:00",
+      "value": "n/a",
+      "action": "Shut down"
+    },
+    {
+      "_id": "WT003",
+      "date": "2024-04-09",
+      "time": "10:00:00",
+      "value": "45°",
+      "action": "Stay still"
+    },
+    {
+      "_id": "WT001",
+      "date": "2024-04-08",
+      "time": "15:45:00",
+      "value": "60°",
+      "action": "Turn"
+    },
+    {
+      "_id": "WT002",
+      "date": "2024-04-08",
+      "time": "16:30:00",
+      "value": "n/a",
+      "action": "Shut down"
+    }
+  ],
+  "recentActivity": [
+    {
+      "_id": 1,
+      "time": "32 min",
+      "color": "text-success",
+      "content": "Quia quae rerum explicabo officiis beateae",
+      "highlight": "explicabo officiis"
+    },
+    {
+      "_id": 2,
+      "time": "1 hour",
+      "color": "text-info",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "highlight": "Lorem ipsum"
+    },
+    {
+      "_id": 3,
+      "time": "2 hours",
+      "color": "text-warning",
+      "content": "Nulla facilisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+      "highlight": "Vestibulum ac diam"
+    },
+    {
+      "_id": 4,
+      "time": "3 hours",
+      "color": "text-danger",
+      "content": "Donec sollicitudin molestie malesuada.",
+      "highlight": "Donec sollicitudin"
+    },
+    {
+      "_id": 5,
+      "time": "4 hours",
+      "color": "text-success",
+      "content": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque.",
+      "highlight": "Vestibulum ante ipsum"
+    }
+  ]
+}

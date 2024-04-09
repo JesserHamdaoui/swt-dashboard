@@ -1,0 +1,46 @@
+.dashboard .info-card {
+  padding-bottom: 10px;
+  min-height: 180px;
+  min-width: 250px;
+}
+
+.dashboard .info-card h6 {
+  font-size: 28px;
+  color: var(--primary);
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard .card-icon {
+  font-size: 32px;
+  line-height: 0;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.dashboard .sales-card .card-icon {
+  color: var(--primary);
+  background-color: #f6f6fe;
+}
+
+.dashboard .sales-card .card-icon {
+  color: var(--second);
+  background-color: #f6f6fe;
+}
+
+.dashboard .revenue-card .card-icon {
+  color: #2eca6a;
+  background-color: #e0f8e9;
+}
+
+.dashboard .customers-card .card-icon {
+  color: #ff771d;
+  background-color: #ffecdf;
+}
+
+.card-title span {
+  display: block;
+}
