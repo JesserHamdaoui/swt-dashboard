@@ -9,7 +9,7 @@ function Card({ card }) {
   };
 
   return (
-    <div className="col-xxl-6 col-md-6">
+    <div>
       <div className="card info-card sales-card">
         <CardFilter filterChange={handleFilterChange} />
         <div className="card-body">
@@ -22,9 +22,7 @@ function Card({ card }) {
             </div>
             <div className="ps-3">
               <h6>
-                {card.name == "Revenue"
-                  ? "$" + card.amount.toLocaleString("en-Us")
-                  : card.amount.toLocaleString("en-Us")}
+                {card.value} {card.unit}
               </h6>
               <span
                 className={`${

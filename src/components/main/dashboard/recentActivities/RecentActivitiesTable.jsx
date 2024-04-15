@@ -10,6 +10,8 @@ function RecentActivitiesTable({ items }) {
         return "danger";
       case "Stay still":
         return "warning";
+      default:
+        return "primary";
     }
   };
 
@@ -28,16 +30,16 @@ function RecentActivitiesTable({ items }) {
         {items &&
           items.length > 0 &&
           items.map((item) => (
-            <tr key={item._id}>
+            <tr key={item.windTurbine._id}>
               <th scope="row">
-                <a href="#">{item._id}</a>
+                <a href="/">{item.windTurbine._id}</a>
               </th>
-              <td>{item.date}</td>
-              <td>{item.time}</td>
-              <td className="text-primary">{item.value}</td>
+              <td>{item.dateTime.substring(0, 10)}</td>
+              <td>{item.dateTime.substring(11, 16)}</td>
+              <td className="text-primary">{item.angleOfAttack}</td>
               <td>
-                <span className={`badge bg-${handleAction(item.action)}`}>
-                  {item.action}
+                <span className={`badge bg-${handleAction(item.status)}`}>
+                  {item.status}
                 </span>
               </td>
             </tr>
