@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 
 function ReportCharts() {
-  const [data, setData] = useState({
+  const [reportData, setReportData] = useState({
     series: [
       {
         name: "Energy Generated",
-        data: [31, 39, 43, 21, 43, 43, 112],
+        data: [0, 0, 0, 0, 0, 0, 0],
       },
       {
         name: "Energy Consumption",
-        data: [43, 54, 53, 23, 55, 66, 12],
+        data: [0, 0, 0, 0, 0, 0, 0],
       },
       {
         name: "Static Energy Generated",
-        data: [56, 72, 54, 33, 65, 21, 112],
+        data: [0, 0, 0, 0, 0, 0, 0],
       },
     ],
     options: {
@@ -65,12 +65,40 @@ function ReportCharts() {
     },
   });
 
+  const fetchReportData = () => {
+    fetch("http://localhost:5000/api/report")
+      .then((res) => res.json())
+      .then((data) => {
+        reportData.series = data.series;
+        reportData.categories = data.categories;
+        setReportData(reportData);
+        console.log(reportData);
+      })
+      .catch((e) => console.log(e.message));
+  };
+
+  useEffect(() => {
+    console.log("Fetching initial data...");
+
+    fetchReportData();
+
+    const intervalId = setInterval(() => {
+      console.log("Fetching data every 60 seconds...");
+      fetchReportData();
+    }, 6000);
+
+    return () => {
+      console.log("Clearing interval...");
+      clearInterval(intervalId);
+    };
+  }, []);
+
   return (
     <Chart
-      options={data.options}
-      series={data.series}
-      type={data.options.chart.type}
-      height={data.options.chart.height}
+      options={reportData.options}
+      series={reportData.series}
+      type={reportData.options.chart.type}
+      height={reportData.options.chart.height}
     />
   );
 }

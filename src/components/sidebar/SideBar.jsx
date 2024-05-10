@@ -11,12 +11,12 @@ function SideBar() {
             <span>Dashboard</span>
           </a>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <a href="/" className="nav-link">
             <i className="bi bi-diagram-2-fill"></i>
             <span>Wind Turbines</span>
           </a>
-        </li>
+        </li> */}
       </ul>
     </aside>
   );

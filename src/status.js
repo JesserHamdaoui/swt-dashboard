@@ -21,6 +21,22 @@ const statusSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  windSpeedPercentage: {
+    type: Number,
+    required: true,
+  },
+  windDirectionPercentage: {
+    type: Number,
+    required: true,
+  },
+  generatedEnergyPercentage: {
+    type: Number,
+    required: true,
+  },
+  staticEnergyPercentage: {
+    type: Number,
+    required: true,
+  },
   alerts: {
     type: [
       {

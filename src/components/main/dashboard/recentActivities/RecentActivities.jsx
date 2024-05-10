@@ -16,7 +16,7 @@ function RecentActivities() {
     fetch("http://localhost:5000/api/log")
       .then((res) => res.json())
       .then((data) => {
-        setLog(data);
+        setLog(data.reverse());
       })
       .catch((e) => console.log(e.message));
   };

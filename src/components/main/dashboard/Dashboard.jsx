@@ -46,7 +46,24 @@ function Dashboard() {
               value: currentStatus[currentStatus.length - 1].windSpeed,
               unit: "m/s",
               icon: "bi bi-wind",
-              percentage: 0.15,
+              percentage: (
+                currentStatus[currentStatus.length - 1].windSpeedPercentage *
+                100
+              ).toFixed(2),
+            }}
+          />
+        </div>
+        <div className="col-md-6">
+          <Card
+            card={{
+              name: "Wind Direction",
+              value: currentStatus[currentStatus.length - 1].windDirection,
+              unit: "deg",
+              icon: "bi bi-compass",
+              percentage: (
+                currentStatus[currentStatus.length - 1]
+                  .generatedEnergyPercentage * 100
+              ).toFixed(2),
             }}
           />
         </div>
@@ -57,29 +74,24 @@ function Dashboard() {
               value: currentStatus[currentStatus.length - 1].generatedEnergy,
               unit: "kWh",
               icon: "bi bi-lightning",
-              percentage: 0.15,
+              percentage: (
+                currentStatus[currentStatus.length - 1]
+                  .generatedEnergyPercentage * 100
+              ).toFixed(2),
             }}
           />
         </div>
         <div className="col-md-6">
           <Card
             card={{
-              name: "Static Energy",
+              name: "Generated Static Energy",
               value: currentStatus[currentStatus.length - 1].staticEnergy,
               unit: "kWh",
-              icon: "bi bi-lightbulb",
-              percentage: 0.15,
-            }}
-          />
-        </div>
-        <div className="col-md-6">
-          <Card
-            card={{
-              name: "Energy Consumption",
-              value: currentStatus[currentStatus.length - 1].consumedEnergy,
-              unit: "kWh",
               icon: "bi bi-lightbulb-fill",
-              percentage: -0.15,
+              percentage: (
+                currentStatus[currentStatus.length - 1].staticEnergyPercentage *
+                100
+              ).toFixed(2),
             }}
           />
         </div>
